@@ -1,0 +1,158 @@
+1. Write a program to Printing Stars in the following Pattern ?
+       
+             
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+ * * * * 
+  * * * 
+   * * 
+    * 
+
+
+2.
+
+   class Data:
+	def __init__(self, name, job=None, pay=0):
+		self.name = name
+		self.job = job
+		self.pay = pay
+	def lastName(self):
+		return self.name.split()[-1]
+	def giveRaise(self, percent):
+		self.pay = int(self.pay * (1 + percent))
+	def __repr__(self):
+		return ' %s, %s' % (self.name, self.pay)
+   class Manager(Data):
+	def giveRaise(self, percent, bonus=.10):	
+		Data.giveRaise(self, percent + bonus)	
+   if __name__ == '__main__':
+	p1 = Data('Vijay')
+	p2 = Data('Satish kumar', job='dev', pay=40000)
+	p3 = Manager('Arjun', 'mgr', 25000)
+
+  What is the O\p to the following ? 
+
+     1. print(p1)
+
+     2. print(p2)
+
+        p2.giveRaise(.20)
+
+     3. print(p2)
+
+        p3.giveRaise(.30)
+				
+     4. print(p3.lastName())
+				
+     5. print(p3)
+
+3. What is the O\p to the following codee ?
+
+
+       while True: pass 
+       x = 10
+       while x:
+           x=x-1
+           if(x%2!=0):
+                print(x)
+
+4. What is the O\p to the following codee ?
+
+
+       while True: pass  
+       x = 10
+       while x:
+            x=x-1
+            if x%2!=0:continue
+            print(x)
+
+
+5. What is the O\p to the following codee ?
+
+  class operators:
+	def __getattr__(self, name):
+		if name == 'age':
+			return 30
+		elif name=="name":
+			return "Shankar"
+		else:
+			raise AttributeError(name)
+  if __name__=='__main__':
+	x = operators()
+
+	print (x.age)
+	print (x.name)
+
+
+6. Explain About higher order functions in Python? Give an Example
+
+
+7.What is the O\p to the following codee ? 
+
+   class Hai:
+	num = 0
+	def __init__(self):
+		Hai.num = Hai.num + 1
+	def Numbers():
+		print("Number of instances created: %s" % Hai.num)
+
+  a = Hai()
+  b = Hai()
+  c = Hai()
+
+     (1).What is the O\p to the following codee in Python 2.X ?
+        
+            Hai.Numbers()
+
+     (2).What is the O\p to the following codee in Python 3.X ?
+
+            Hai.Numbers()
+
+     (3).What is the O\p to the following codee in Python 2.x and 3.x ?
+            
+            a.Numbers()
+
+
+
+8.   What is the O\p to the following codee ?
+
+
+import re
+def test_patterns(text, patterns=[]):
+     for pattern in patterns:
+         print()
+         print ('Matching "%s"' % pattern)
+     	for match in re.finditer(pattern, text):
+        	 s = match.start()
+	         e = match.end()
+        	 print ('  %2d : %2d = "%s"' % (s, e-1, text[s:e]))
+
+if __name__ == '__main__':
+  test_patterns('abbaaabbbbaaaaa',['ab?'])
+
+
+
+9.  What is the O\p to the following codee ?
+
+import re
+def test_patterns(text, patterns=[]):
+     for pattern in patterns:
+         print()
+         print ('Matching "%s"' % pattern)
+         for match in re.finditer(pattern, text):
+         	s = match.start()
+         	e = match.end()
+         	print ('  %2d : %2d = "%s"' % (s, e-1, text[s:e]))
+     
+if __name__ == '__main__':
+  test_patterns('This is Python by satya sir',['[a-zA-Z]+'])
+
+10. 
+
+import numpy as np
+x=np.arange(30).reshape(2,3,5)
+print(x)
+y
